@@ -12,7 +12,7 @@
 <body>
 
 <header>
-    <mat-card> <h1>CarDetectionCounting</h1> </mat-card>
+    <mat-card class = "dthead"> <h1>CarDetectionCounting</h1> </mat-card>   
 </header>
 
 <section>
@@ -26,9 +26,13 @@
     
     <div class="btn-group" >
 
-        <form action="/action_page.php">
-        <p> Count Car In: {{CameraIn}} </p><br>
-        <p> Count Car Out: {{CameraOut}} </p><br>
+        <form action="/action_page.php"  *ngFor="let item of items | async" >
+          
+          <p> 
+            {{item.name}} : {{item.count}}
+          </p><br>
+            
+
       </form>
       <h6>                      </h6>
       
@@ -50,9 +54,13 @@
     
     <div class="btn-group" >
 
-        <form action="/action_page.php">
-        <p> Count Car In: {{CameraIn1}} </p><br>
-        <p> Count Car Out: {{CameraOut1}} </p><br>
+        <form action="/action_page.php"  *ngFor="let item2 of items2 | async" >
+          
+          <p> 
+            {{item2.name}} : {{item2.count}}
+          </p><br>
+            
+
       </form>
       <h6>                      </h6>
       
@@ -73,14 +81,18 @@
     
     <div class="btn-group" >
 
-        <form action="/action_page.php">
-        <p> Count Car In: {{CameraIn3}} </p><br>
-        <p> Count Car Out: {{CameraOut3}} </p><br>
+        <form action="/action_page.php"  *ngFor="let item3 of items3 | async" >
+          
+          <p> 
+            {{item3.name}} : {{item3.count}}
+          </p><br>
+            
+
       </form>
-      <h6>                      </h6>
-      
-     
+          
     </div>
+    
+
   </article>
  
 </section>
@@ -89,26 +101,44 @@
   <nav>
     <h3>   </h3>
     <img src="src\app\d.jpg" style="width:100%;">
+    <h1>                      </h1>
+    <h1>                      </h1>
   </nav>
   
   <article>
-    <h2>Door4 </h2><br>
+    <h2>Door4 </h2><br> 
     
     <div class="btn-group" >
 
-        <form action="/action_page.php">
-        <p> Count Car In: {{CameraIn4}} </p><br>
-        <p> Count Car Out: {{CameraOut4}} </p><br>
+        <form action="/action_page.php"  *ngFor="let item4 of items4 | async" >
+          
+          <p> 
+            {{item4.name}} : {{item4.count}}
+          </p><br>
+            
+
       </form>
-      <h6>                      </h6>
       
-     
     </div>
   </article>
- 
-</section>
+  
+  <footer>
+      <h6>            .          </h6>
+     <div class = "button-row">
+      <h1>                   </h1>
+        <button mat-raised-button style="background-color:rgb(206, 26, 26);"
+        routerLink="/toplus">Plus camera</button>
+        <mat-icon hsvgIcon="tumbs-up"></mat-icon>
+        <button mat-stroked-button color="warn" style="background-color:rgb(201, 123, 6);"
+        routerLink="/">
+            Logout 
+        </button>
 
+    </div>
+  </footer>
+</section>
 </body>
 </html>
-  </mat-card>
+
+</mat-card>
 
