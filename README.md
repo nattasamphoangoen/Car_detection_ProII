@@ -1,4 +1,5 @@
-# vision
+https://github.com/amartya-k/vision
+https://github.com/rpi-jefer/firebase-leds
 This is a simple vehile detection project using Computer Vision
 
 Here I used background subtractions methods of OpenCV Library of Python and some morphological transformation for accuracy.
