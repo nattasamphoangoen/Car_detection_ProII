@@ -1,0 +1,25 @@
+<header>
+     <mat-card class="dthead">
+      <h2>Login</h2><br>
+        <div class="example-container" >
+          
+          <mat-form-field>
+            <input matInput placeholder="Username" >
+          </mat-form-field>
+
+          <mat-form-field>
+           <input matInput placeholder="password" [type]="'password'">
+           <mat-icon matSuffix ></mat-icon>
+           <!-- <input matInput placeholder="password" [type]="hide ? 'password' : 'text'">
+           <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon> -->
+          </mat-form-field>
+          
+         </div>
+         
+        <div class="button-row">
+            <button  class="bu" mat-button color="primary" >สร้างบัญชี</button>
+            <button class="bi" mat-flat-button color="warn" (click)="login()">Login</button>
+        </div>
+        <h2>   </h2>
+    </mat-card>
+</header>

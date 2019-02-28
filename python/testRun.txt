@@ -1,0 +1,3 @@
+$ git clone https://github.com/ahmetozlu/vehicle_counting_tensorflow.git
+$ cd vehicle_counting_tensorflow
+$ python3 vehicle_detection_main.py

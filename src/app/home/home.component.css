@@ -1,0 +1,110 @@
+.example-icon {
+    padding: 0 14px;
+    
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .example-button-row button,
+  .example-button-row a {
+    margin-right: 8px;
+  }
+  .bb{
+    background-color: rgba(18, 32, 156, 0.692);
+  }
+  .ii{
+    color: rgb(209, 0, 0);
+  }
+  .oo{
+    color: rgb(21, 0, 209);
+  }
+  .example-container {
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid #555;
+  }
+  .aa {
+    font-family: courier;
+    font-size: 25px;
+  }
+
+  h1 {
+    color: rgb(0, 0, 0);
+    font-family: courier;
+    font-size: 165%;
+}
+
+p {
+    font-family: courier;
+    font-size: 25px;
+}
+h2{
+    color: rgb(0, 0, 1);
+    font-family: courier;
+    font-size: 30px;
+}
+h6{
+    color: #3b2929;
+   
+}
+.city {
+    background-color: rgb(255, 196, 0);
+    color: rgb(0, 0, 1);
+    padding: 20px;
+  } 
+
+
+  * {
+    box-sizing: border-box;
+}
+/* Style the header */
+
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    /* width: 100%; */
+    width: 35%;
+    height: 300px; /* only for demonstration, should be removed */
+    /* background: rgb(255, 223, 181); */
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dthead{
+    background-color: rgb(181, 255, 209);
+}
+
+article {
+    float: left;
+    padding: 20px;
+    width: 65%;
+    /* background-color: #a8ccd1; */
+    height: 300px; /* only for demonstration, should be removed */
+    
+}
+footer {
+    /* background-color: #3b2929; */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    height: 300%;
+  }
+
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+  

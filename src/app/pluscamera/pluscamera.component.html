@@ -1,0 +1,71 @@
+<mat-toolbar class="bb" >
+    <mat-toolbar-row>
+      <!-- <div class="example-button-row"> -->
+            <button mat-icon-button (click)="black()">
+              <mat-icon >keyboard_arrow_left</mat-icon>
+              <span >black</span>
+            </button>
+
+      <!-- <mat-icon >keyboard_arrow_left</mat-icon> -->
+      <h2> </h2>
+      <span class="aa" >CarDetectionCounting</span>
+      <span class="example-spacer"></span>
+    
+        <!-- </div> -->
+    </mat-toolbar-row>
+    </mat-toolbar>
+
+    <script>
+        function clickCounter() {
+            if(typeof(Storage) !== "undefined") {
+                if (localStorage.clickcount) {
+                    localStorage.clickcount = Number(localStorage.clickcount)+1;
+                } else {
+                    localStorage.clickcount = 1;
+                }
+                document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+        }
+    </script>
+
+    <form class="example-form" #wikiForm="ngForm">
+    <mat-vertical-stepper>
+      <mat-step label="เลือกประตู">
+        <mat-form-field >
+            <!-- <label for="d1" name="d1" ngModel></label> -->
+          <mat-select placeholder="เลือก" >
+            <mat-option value="ประตู1" >ประตู1</mat-option>
+            <mat-option value="ประตู2" >ประตู2</mat-option>
+            <mat-option value="ประตู3" >ประตู3</mat-option>
+            <mat-option value="ประตู4" >ประตู4</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class="ii">
+        <button mat-button matStepperNext >Next</button>
+        </div>
+      </mat-step>
+     
+      <mat-step label="ใส่ชื่อ">
+        <mat-form-field>
+          <label for="count" name="count" ngModel></label>
+          <input matInput placeholder="ชื่อ" for="name" type="text" [(ngModel)]="name" name="name" ><br>
+        </mat-form-field>
+        <div class="ii">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+  
+      <mat-step label="เสร็จ">You are now done.
+          <div class="ii">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="addWiki(wikiForm)">Add</button>
+          </div>
+      </mat-step>
+   
+    
+    </mat-vertical-stepper>
+   
+  </form>
