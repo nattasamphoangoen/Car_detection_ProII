@@ -1,0 +1,50 @@
+<mat-toolbar class="bb" >
+<mat-toolbar-row>
+  
+  <span class="aa" >CarDetectionCounting</span>
+  <span class="example-spacer"></span>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/plus">
+          
+        <mat-icon  >control_point</mat-icon>
+        <span class="oo">เพิ่มกล้อง</span>
+        
+        
+      </button>
+      
+      <button mat-menu-item (click)="Logout()" >
+        <mat-icon >exit_to_app</mat-icon>
+        <span class="ii">Logout</span>
+      </button>
+   
+    </mat-menu>
+</mat-toolbar-row>
+</mat-toolbar>
+
+<section>
+  <nav>
+    <h3>   </h3>
+    <!-- <iframe width="1124" height="632" src="https://www.youtube.com/embed/4oOV5IMwUKs?list=PLcwQy6DvJjszcmOcD00rCsHnlNDzNwXO_" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    <!-- <img src="http://s3-ap-northeast-1.amazonaws.com/cgblogassets/blog/th_TH/wp-content/uploads/2015/04/MostBeautifulCars_Corvette.jpg" style="width:100%;"> -->
+    <img src="http://localhost:5000/video_feed" style="width:100%;">
+
+  </nav>
+  
+  <article>
+    <h2>Door1 </h2>
+    <div>
+        <form action="/action_page.php"  *ngFor="let item of items | async" >
+          <p> 
+            {{item.name}} : {{item.count}}
+          </p>
+      </form>
+       
+     
+    </div>
+  </article>
+ 
+</section>
